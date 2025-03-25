@@ -1,4 +1,4 @@
-package cecilia.tacocloud.tacos;
+package cecilia.tacocloud.tacos.entity;
 
 import lombok.Data;
 

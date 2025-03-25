@@ -1,0 +1,157 @@
+/* ===== 全局基礎樣式 ===== */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa; /* 淺灰色背景 */
+    color: #333; /* 主文本顏色 */
+}
+
+/* 主容器居中 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #e76f51;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* ===== 圖片樣式 ===== */
+img {
+    display: block;
+    max-width: 200px;
+    margin: 0 auto 30px; /* 居中 下間距 */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ===== 表單網格佈局 ===== */
+form.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 響應式網格 */
+    gap: 25px; /* 列間距 */
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+/* ===== 配料分類組樣式 ===== */
+.ingredient-group {
+    padding: 20px;
+    border: 2px solid #e9ecef; /* 淺灰色邊框 */
+    border-radius: 8px;
+    background: #fff;
+    transition: transform 0.2s; /* 懸停動畫 */
+}
+
+.ingredient-group:hover {
+    transform: translateY(-3px); /* 上浮效果 */
+}
+
+/* 分類標題 */
+.ingredient-group h3 {
+    color: #2a9d8f;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2a9d8f; /* 下劃線 */
+    font-size: 1.3em;
+}
+
+/* ===== 單個配料項 ===== */
+.ingredient-group div {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* 復選框自定義樣式 */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    accent-color: #2a9d8f; /* 选中状态颜色 */
+    cursor: pointer;
+}
+
+/* 配料問吧呢 */
+span {
+    font-size: 1em;
+    color: #555;
+    transition: color 0.2s;
+}
+
+/* 選中時配料加粗 */
+input[type="checkbox"]:checked + span {
+    font-weight: 600;
+    color: #264653;
+}
+
+/* ===== 命名輸入框 ===== */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #2a9d8f; /* 聚焦時顯示顏色 */
+    outline: none;
+    box-shadow: 0 0 5px rgba(42,157,143,0.3);
+}
+
+/* ===== 提交按鈕 ===== */
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #e76f51; /* 主題橙色 */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #f4a261;
+    transform: scale(1.02); /* 懸停放大 */
+}
+
+button:active {
+    transform: scale(0.98); /* 點擊下沉效果 */
+}
+
+/* ===== 響應式設計 手機優化 ===== */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    form.grid {
+        grid-template-columns: 1fr; /* 手机单列布局 */
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .ingredient-group {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
